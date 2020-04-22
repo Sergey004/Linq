@@ -13,6 +13,7 @@ namespace Linq
         { 
             for (int i =1; i <=100;i++)
             {
+                Console.WriteLine("Обращение к элементу: {0}", i);
                 yield return i;
             }
         }

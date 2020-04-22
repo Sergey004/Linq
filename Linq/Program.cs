@@ -20,13 +20,19 @@ namespace Linq
             //{
             //    Console.WriteLine(i);
             // }
-            var resultSet = set.Select(i => new { Numder = i, IsEven = i % 2 == 0 }).OrderBy(r => r.IsEven);
+            //var resultSet = set.Select(i => new { Numder = i, IsEven = i % 2 == 0 }).OrderBy(r => r.IsEven);
 
-            foreach (var element in resultSet)
-            {
-                Console.WriteLine(element.Numder);
-            }
+            //foreach (var element in resultSet)
+            //{
+            //     Console.WriteLine(element.Numder);
+            //}
             //Console.WriteLine(result);
+            var resultSet = set.Where(s => s % 2 == 0).Select(i => "*" + i.ToString() + "*").Where(i => i.Length == 4);
+            foreach (var i in resultSet)
+            {
+                Console.WriteLine(i);
+            }
+            
             Console.ReadLine();
         }
     }
